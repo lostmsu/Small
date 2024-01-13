@@ -11,7 +11,7 @@ public struct SmallList<TSize, T>: IList<T>
     int stackCount;
     List<T>? heapItems;
 
-    public int Count => this.stackCount + this.heapItems?.Count ?? 0;
+    public int Count => this.stackCount + (this.heapItems?.Count ?? 0);
     public bool IsReadOnly => false;
 
     public int IndexOf(T item) {

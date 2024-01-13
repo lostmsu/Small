@@ -10,6 +10,15 @@ public class SmallListTests {
     }
 
     [Fact]
+    public void Count() {
+        var list = new SmallList<N2<int>, int>();
+        for(int i = 0; i < 4; i++) {
+            Assert.Equal(i, list.Count);
+            list.Add(i);
+        }
+    }
+
+    [Fact]
     public void InsertAt() {
         for (int pos = 0; pos <= 3; pos++) {
             var list = new SmallList<N2<int>, int> { 1, 2, 3 };
